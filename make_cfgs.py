@@ -4,7 +4,6 @@ from creatures import creatures, spawn
 # yes, yes this is procedural and could be easier done functionally... but for such a narrow purpose... yeah
 
 zones = {}
-creaturelist = {}
 
 # recompile easy-to-read list of biome assignments into Mo'C-ready structure
 
