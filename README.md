@@ -1,18 +1,11 @@
 easy_mocreatures
 ================
 
-This is just a stupid-cheesy procedural python project to turn easier-to-read minecraft creature configs
-into mo'creatures .cfg files that then must, by hand, be placed in the correct locations
+Take an easier-to-read JSON-esque (but pure python) set of configurations and render them into the .cfg files understood by Zhark's Mo'Creatures mod for Minecraft.
 
-MoCBiomeGrouns.cfg is placed in /config/MoCreatures/
-and the rest are palced in /config/MoCreatures/Creatures/
+See: http://www.minecraftforum.net/topic/81771-162-mo-creatures-v601-with-raccoons-ants-mini-golems-silver-skeletons-and-more-fish/
 
-The python code itself is stupid straight forward and could probably do well with lots of refactoring and upgrades...
-but it does what it was initially intended to do.
+See: https://minecraft.net
 
-biomes.py defines which biomes are in which groupnames
-creatures.py defines creature spawn behavior names as well as which groupnames creatures are assigned to
+================
 
-both are intended to be easier to read and fiddle with than MoCreature's own configs, essentially.
-
-That's it.
