@@ -1,383 +1,137 @@
+temperature = ['icy','cool','warm','hot','molten']
+aridity = ['arid','dry','balanced','wet','soaked']
+terrain = ['flat','shelved','hilly','mountainous','jagged']
+flora = ['deserted','brush','thickets','fungal','forested','tangled']
+fauna = ['magical','calm','wild','dangerous','evil']
+
+# Mod: Biome: [temperature, aridity, terrain, flora, fauna]
 biomes = {
-    'FROZEN': {
-        'SEA': {
-            'BOP': ['Polar'],
-            'BWG': [],
-            'MC': ['FrozenOcean'],
-            'XL': []
-        },
-        'SHORE': {
-            'BOP': [],
-            'BWG': [],
-            'MC': ['FrozenRiver'],
-            'XL': []
-        },
-        'PLAIN': {
-            'BOP': ['Arctic','Tundra'],
-            'BWG': [],
-            'MC': ['IcePlains'],
-            'XL': []
-        },
-        'WOOD': {
-            'BOP': ['Frost Forest','Arctic Forest','Snowy Dead Forest','Taiga','Icy Hills'],
-            'BWG': [],
-            'MC': ['Taiga'],
-            'XL': []
-        },
-        'HILL': {
-            'BOP': ['Glacier','Icy Hills','Tundra'],
-            'BWG': [],
-            'MC': ['TaigaHills'],
-            'XL': []
-        },
-        'PEAK': {
-            'BOP': ['Alps','Glacier'],
-            'BWG': [],
-            'MC': ['IceMountains'],
-            'XL': []
-        }
+    'BOP': {
+        'Alps': ['icy','dry','jagged','deserted','calm']
+        'Arctic': ['icy','dry','flat','deserted','calm'],
+        'Bamboo Forest': ['hot','balanced','flat','tangled','wild'],
+        'Bayou': ['warm','soaked','flat','tangled','dangerous'],
+        'Bloody Heap': [],
+        'Bog': ['hot','wet','flat','thickets','dangerous'],
+        'Boreal Forest': ['cool','balanced','mountainous','forested','calm'],
+        'Brushland': ['hot','dry','flat','thickets','dangerous'],
+        'Canyon': ['hot','dry','jagged','thickets','dangerous'],
+        'Chaparral': ['warm','dry','hilly','brush','calm'],
+        'Cherry Blossom Grove': ['cool','balanced','hilly','thickets','magical'],
+        'Coniferous Forest': ['warm','balanced','hilly','forested','wild'],
+        'Crag': ['cool','arid','jagged','deserted','dangerous'],
+        'Dead Forest': ['cool','balanced','hilly','forested','evil'],
+        'Dead Swamp': ['warm','wet','flat','thickets','evil'],
+        'Deciduous Forest': ['warm','balanced','hilly','forested','wild'],
+        'Dunes': ['hot','dry','jagged','deserted','dangerous'],
+        'Fen': ['warm','wet','hilly','thickets','dangerous'],
+        'Flower Field': ['warm','balanced','shelved','brush','magical'],
+        'Frost Forest': ['icy','balanced','hilly','forested','wild'],
+        'Grassland': ['cool','wet','hilly','brush','calm'],
+        'Grove': ['cool','balanced,','flat','thickets','calm'],
+        'Heathland': ['warm','dry','flat','brush','calm'],
+        'Highland': ['warm','dry','jagged','brush','calm'],
+        'Jade Cliffs': ['warm','balanced','jagged','forested','wild'],
+        'Lavender Fields': ['warm','balanced','flat','brush','calm'],
+        'Lush Desert': ['hot','dry','hilly','brush','dangerous'],
+        'Lush Swamp': ['warm','soaked','hilly','thickets','dangerous'],
+        'Maple Woods': ['cool','balanced','hilly','forested','calm'],
+        'Marsh': ['warm','soaked','hilly','brush','wild'],
+        'Meadow': ['cool','balanced','flat','brush','calm'],
+        'Moor': ['cool','wet','mountainous','brush','wild'],
+        'Mountain': ['warm','balanced','mountainous','thickets','calm'],
+        'Mystic Grove': ['warm','wet','flat','forested','magical'],
+        'Ominous Woods': ['cool','wet','hilly','forested','evil'],
+        'Origin Valley': ['warm','balanced','hilly','thickets','magical'],
+        'Outback': ['hot','dry','hilly','brush','wild'],
+        'Pasture': ['warm','balanced','flat','brush','calm'],
+        'Prairie': ['warm','dry','flat','thickets','calm'],
+        'Quagmire': ['warm','wet','flat','brush','evil'],
+        'Rainforest': ['warm','wet','jagged','tangled','wild'],
+        'Redwood Forest': ['warm','balanced','flat','thickets','wild'],
+        'Sacred Springs': ['warm','wet','mountainous','forested','magical'],
+        'Seasonal Forest': ['cool','balanced','mountainous','forested','wild'],
+        'Shield': ['cool','dry','hilly','thickets','dangerous'],
+        'Shrubland': ['cool','dry','flat','brush',],
+        'Silkglades': ['cool','balanced','flat','tangled','evil'],
+        'Sludgepit': ['warm','balanced','flat','forested','evil'],
+        'Snowy Coniferous Forest': ['icy','balanced','hilly','forested','wild'],
+        'Spruce Woods': ['warm','balanced','flat','forested','wild'],
+        'Temperate Rainforest': ['warm','balanced','mountainous','forested','wild'],
+        'Thicket': ['cool','dry','flat','brush','calm'],
+        'Timber': ['cool','dry','hilly','forested','calm'],
+        'Tropical Rainforest': ['hot','wet','hilly','forested','wild'],
+        'Tropics': ['hot','balanced','hilly','thickets','wild'],
+        'Tundra': ['cool','dry','flat','thickets','wild'],
+        'Volcano': ['molten','dry','mountainous','deserted','dangerous'],
+        'Wasteland': ['hot','arid','flat','brush','evil'],
+        'Wetland': ['warm','wet','hilly','tangled','dangerous'],
+        'Woodland': ['warm','balanced','hilly','forested','calm']
     },
-    'COOL': {
-        'SEA': {
-            'BOP': ['Marsh'],
-            'BWG': [],
-            'MC': ['Ocean'],
-            'XL': []
-        },
-        'SHORE': {
-            'BOP': ['Moor','Bog','Grassland','Marsh'],
-            'BWG': [],
-            'MC': [],
-            'XL': []
-        },
-        'PLAIN': {
-            'BOP': ['Moor','Steppe','Woodland','Brushland','Chaparral','Grassland','Heathland','Meadow','Praire','Thicket','Tundra'],
-            'BWG': [],
-            'MC': ['Plains'],
-            'XL': []
-        },
-        'WOOD': {
-            'BOP': ['Boreal Forest','Woodland','Frost Forest','Forest','Spruce Woods','Grove','Seasonal Forest','Birch Forest','Bog','Coniferous Forest','Deciduous Forest','Dead Forest','Heathland','Maple Woods','Meadow','Ominous Woods','Redwood Forest','Shield','Taiga','Temperate Rainforest','Timber'],
-            'BWG': [],
-            'MC': ['Forest','Taiga'],
-            'XL': []
-        },
-        'HILL': {
-            'BOP': ['Boreal Forest','Moor','Seasonal Forest','Coniferous Forest','Meadow','Timber'],
-            'BWG': [],
-            'MC': ['ForestHills','TaigaHills'],
-            'XL': []
-        },
-        'PEAK': {
-            'BOP': ['Extreme Hills','Mountain','Canyon','Crag'],
-            'BWG': [],
-            'MC': ['ExtremeHills'],
-            'XL': []
-        }
+    'MC': {
+        'Beach': ['warm','balanced','flat','deserted','calm'],
+        'Birch Forest': ['cool','balanced','flat','forested','calm'],
+        'Birch Forest Hills': ['cool','balanced','hilly','forested','wild'],
+        'Birch Forest Hills M': ['cool','balanced','mountainous','forested','wild'],
+        'Birch Forest M': ['cool','balanced','hilly','forested','wild'],
+        'Cold Beach': ['cool','balanced','flat','deserted','calm'],
+        'Cold Taiga': ['icy','balanced','hilly','forested','wild'],
+        'Cold Taiga Hills': ['icy','balanced','mountainous','forested','wild'],
+        'Cold Taiga M': ['icy','balanced','hilly','forested','calm'],
+        'Deep Ocean': ['warm','soaked','flat','deserted','calm'],
+        'Desert': ['hot','arid','flat','deserted','calm'],
+        'Desert M': ['hot','arid','hilly','deserted','wild'],
+        'DesertHills': ['hot','arid','hilly','deserted','wild'],
+        'Extreme Hills': ['cool','dry','mountainous','deserted','calm'],
+        'Extreme Hills Edge': ['cool','dry','mountainous','deserted','calm'],
+        'Extreme Hills M': ['cool','dry','jagged','deserted','calm'],
+        'Extreme Hills+': ['cool','dry','mountainous','thickets','calm'],
+        'Extreme Hills+ M': ['cool','dry','jagged','thickets','calm'],
+        'Flower Forest': ['warm','balanced','hilly','forested','calm'],
+        'Forest': ['cool','balanced','hilly','forested','wild'],
+        'ForestHills': ['cool','balanced','mountainous','forested','wild'],
+        'FrozenOcean': ['icy','soaked','flat','deserted','dangerous'],
+        'FrozenRiver': ['icy','balanced','flat','deserted','wild'],
+        'Hell': ['molten','arid','jagged','deserted','evil'],
+        'Ice Mountains': ['icy','dry','mountainous','deserted','wild'],
+        'Ice Plains': ['icy','dry','flat','deserted','wild'],
+        'Ice Plains Spikes': ['icy','dry','hilly','deserted','magical'],
+        'Jungle': ['hot','wet','hilly','tangled','dangerous'],
+        'Jungle M': ['hot','wet','mountainous','tangled','dangerous'],
+        'JungleEdge': ['hot','wet','hilly','thickets','dangerous'],
+        'JungleEdge M': ['hot','wet','mountainous','thickets','dangerous'],
+        'JungleHills': ['hot','wet','mountainous','tangled','dangerous'],
+        'Mega Spruce Taiga': ['cool','balanced','hilly','forested','wild'],
+        'Mega Taiga': ['cool','balanced','hilly','forested','wild'],
+        'Mega Taiga Hills': ['cool','balanced','mountainous','forested','wild'],
+        'Mesa': ['hot','arid','shelved','deserted','dangerous'],
+        'Mesa (Bryce)': ['hot','arid','jagged','deserted','dangerous'],
+        'Mesa Plateau': ['hot','arid','shelved','brush','wild'],
+        'Mesa Plateau F': ['hot','arid','shelved','thickets','wild'],
+        'Mesa Plateau F M': ['hot','arid','jagged','thickets','wild'],
+        'Mesa Plateau M': ['hot','arid','jagged','brush','wild'],
+        'MushroomIsland': ['magical','balanced','hilly','fungal','calm'],
+        'MushroomIslandShore': ['magical','balanced','flat','fungal','calm'],
+        'Ocean': ['cool','soaked','flat','deserted','wild'],
+        'Plains': ['cool','balanced','flat','brush','calm'],
+        'River': ['cool','balanced','flat','deserted','wild'],
+        'Roofed Forest': ['warm','wet','flat','tangled','dangerous'],
+        'Roofed Forest M': ['warm','wet','hilly','tangled','dangerous'],
+        'Savanna': ['hot','dry','flat','brush','dangerous'],
+        'Savanna M': ['hot','dry','hilly','brush','dangerous'],
+        'Savanna Plateau': ['hot','dry','shelved','brush','wild'],
+        'Savanna Plateau M': ['hot','dry','jagged','brush','wild'],
+        'Sky': [],
+        'Stone Beach': ['cool','dry','jagged','deserted','calm'],
+        'Sunflower Plains': ['warm','balanced','flat','brush','calm'],
+        'Swampland': ['warm','soaked','flat','thickets','wild'],
+        'Swampland M': ['warm','wet','hilly','thickets','dangerous'],
+        'Taiga': ['cool','balanced','hilly','forested','calm'],
+        'Taiga M': ['cool','balanced','hilly','forested','wild'],
+        'TaigaHills': ['cool','balanced','hilly','forested','calm'],
     },
-    'WARM': {
-        'SEA': {
-            'BOP': ['Marsh'],
-            'BWG': [],
-            'MC': ['Ocean'],
-            'XL': []
-        },
-        'SHORE': {
-            'BOP': ['Grassland','Bog','Marsh','Sacred Springs'],
-            'BWG': [],
-            'MC': ['Beach','Shore'],
-            'XL': []
-        },
-        'PLAIN': {
-            'BOP': ['Woodland','OvergrownGreens','Field','Brushland','Grassland','Meadow','Orchard','Outback','Pasture','Praire','Scrubland','Thicket','Sacred Springs','Garden'],
-            'BWG': [],
-            'MC': ['Plains'],
-            'XL': []
-        },
-        'WOOD': {
-            'BOP': ['Boreal Forest','Silkglades','Woodland','Forest','Origin Valley','Grove','Rainforest','Bamboo Forest','Birch Forest','Bog','Boreal Forest','Cherry Blossom Grove','Coniferous Forest','Deciduous Forest','Maple Woods','Meadow','Mystic Grove','Jade Cliffs','Orchard','Redwood Forest','Temperate Rainforest','Timber','Woodland'],
-            'BWG': [],
-            'MC': ['Forest'],
-            'XL': []
-        },
-        'HILL': {
-            'BOP': ['Boreal Forest','OvergrownGreens','Field','Rainforest','Badlands','Bamboo Forest','Coniferous Forest','Highland','Jade Cliffs','Outback','Timber','Woodland'],
-            'BWG': [],
-            'MC': ['ForestHills'],
-            'XL': []
-        },
-        'PEAK': {
-            'BOP': ['Extreme Hills', 'Mountain','Badlands'],
-            'BWG': [],
-            'MC': ['ExtremeHills'],
-            'XL': []
-        }
-    },
-    'HUMID': {
-        'SEA': {
-            'BOP': ['Mangrove','Marsh'],
-            'BWG': [],
-            'MC': ['Ocean'],
-            'XL': []
-        },
-        'SHORE': {
-            'BOP': ['Sludgepit','Mangrove','Bayou','Lush Swamp','Marsh','Swampland','Sacred Springs'],
-            'BWG': [],
-            'MC': ['Beach','Shore','Swampland'],
-            'XL': []
-        },
-        'PLAIN': {
-            'BOP': ['Field','Sacred Springs'],
-            'BWG': [],
-            'MC': [],
-            'XL': []
-        },
-        'WOOD': {
-            'BOP': ['Sludgepit','Fungi Forest','Silkglades','Wetland','Rainforest','Tropics','Bayou','Bamboo Forest','Jade Cliffs','Lush Swamp','Ominous Woods','Swampland','Temperate Rainforest','Tropical Rainforest'],
-            'BWG': [],
-            'MC': ['Swampland'],
-            'XL': []
-        },
-        'HILL': {
-            'BOP': ['Field','Wetland','Rainforest','Tropics','Jade Cliffs'],
-            'BWG': [],
-            'MC': [],
-            'XL': []
-        },
-        'PEAK': {
-            'BOP': ['Tropics'],
-            'BWG': [],
-            'MC': [],
-            'XL': []
-        }
-    },
-    'ARID': {
-        'SEA': {
-            'BOP': [],
-            'BWG': [],
-            'MC': ['Ocean'],
-            'XL': []
-        },
-        'SHORE': {
-            'BOP': ['Lush Desert','Hot Springs','Oasis','Quagmire','Gravel Beach'],
-            'BWG': [],
-            'MC': ['Beach','Shore'],
-            'XL': []
-        },
-        'PLAIN': {
-            'BOP': ['Steppe','Lush Desert','Brushland','Chaparral','Desert','Dunes','Oasis','Outback','Savannah','Scrubland','Wasteland'],
-            'BWG': [],
-            'MC': ['Desert'],
-            'XL': []
-        },
-        'WOOD': {
-            'BOP': ['Lush Desert','Hot Springs','Lush Desert','Dead Forest'],
-            'BWG': [],
-            'MC': [],
-            'XL': []
-        },
-        'HILL': {
-            'BOP': ['Deadlands','Badlands','Dunes','Wasteland','Highland','Outback'],
-            'BWG': [],
-            'MC': ['DesertHills','Hot Springs'],
-            'XL': []
-        },
-        'PEAK': {
-            'BOP': ['Badlands','Canyon','Crag','Mesa'],
-            'BWG': [],
-            'MC': [],
-            'XL': []
-        },
-    },
-    'FIRY': {
-        'SEA': {
-            'BOP': ['Phantasmagoric Inferno','Nether'],
-            'BWG': [],
-            'MC': ['Hell'],
-            'XL': []     
-        },
-        'SHORE': {
-            'BOP': ['Phantasmagoric Inferno','Nether'],
-            'BWG': [],
-            'MC': ['Hell'],
-            'XL': []     
-        },
-        'PLAIN': {
-            'BOP': ['Deadlands','Nether','Corrupted'],
-            'BWG': [],
-            'MC': ['Hell'],
-            'XL': []     
-        },
-        'WOOD': {
-            'BOP': ['Undergarden','Hot Springs','Boneyard'],
-            'BWG': [],
-            'MC': [],
-            'XL': []     
-        },
-        'HILL': {
-            'BOP': ['Deadlands','Volcano','Nether','Corrupted'],
-            'BWG': [],
-            'MC': ['Hell'],
-            'XL': []     
-        },
-        'PEAK': {
-            'BOP': ['Volcano','Nether'],
-            'BWG': [],
-            'MC': ['Hell'],
-            'XL': []     
-        }
-    },
-    'GOOD': {
-        'SEA': {
-            'BOP': [],
-            'BWG': [],
-            'MC': ['Ocean'],
-            'XL': []
-        },
-        'SHORE': {
-            'BOP': [],
-            'BWG': [],
-            'MC': [],
-            'XL': []
-        },
-        'PLAIN': {
-            'BOP': ['Origin Valley','Garden'],
-            'BWG': [],
-            'MC': [],
-            'XL': []
-        },
-        'WOOD': {
-            'BOP': ['Cherry Blossom Grove','Origin Valley','Mystic Grove'],
-            'BWG': [],
-            'MC': [],
-            'XL': []
-        },
-        'HILL': {
-            'BOP': [],
-            'BWG': [],
-            'MC': [],
-            'XL': []
-        },
-        'PEAK': {
-            'BOP': [],
-            'BWG': [],
-            'MC': [],
-            'XL': []
-        }
-    },
-    'EVIL': {
-        'SEA': {
-            'BOP': [],
-            'BWG': [],
-            'MC': ['Ocean','Swampland'],
-            'XL': []
-        },
-        'SHORE': {
-            'BOP': ['Fen','Ominous Woods'],
-            'BWG': [],
-            'MC': ['Swampland'],
-            'XL': []
-        },
-        'PLAIN': {
-            'BOP': ['Fen','Wasteland'],
-            'BWG': [],
-            'MC': [],
-            'XL': []
-        },
-        'WOOD': {
-            'BOP': ['Silkglades','Fen','Jade Cliffs','Ominous Woods','Shield'],
-            'BWG': [],
-            'MC': ['Swampland'],
-            'XL': []
-        },
-        'HILL': {
-            'BOP': ['Fen','Badlands','Jade Cliffs'],
-            'BWG': [],
-            'MC': [],
-            'XL': []
-        },
-        'PEAK': {
-            'BOP': ['Badlands','Crag'],
-            'BWG': [],
-            'MC': [],
-            'XL': []
-        }
-    },
-    'DEAD': {
-        'SEA': {
-            'BOP': ['Dead Swamp'],
-            'BWG': [],
-            'MC': ['Ocean'],
-            'XL': []
-        },
-        'SHORE': {
-            'BOP': ['Sludgepit','Moor','Fen','Ominous Woods','Quagmire','Sacred Springs','Dead Swamp'],
-            'BWG': [],
-            'MC': [],
-            'XL': []
-        },
-        'PLAIN': {
-            'BOP': ['Fen','Quagmire','Wasteland','Sacred Springs','Dead Swamp'],
-            'BWG': [],
-            'MC': [],
-            'XL': []
-        },
-        'WOOD': {
-            'BOP': ['Sludgepit','Fungi Forest','Silkglades','Frost Forest','Fen','Snowy Dead Forest','Dead Forest','Ominous Woods','Mystic Grove','Icy Hills'],
-            'BWG': [],
-            'MC': [],
-            'XL': []
-        },
-        'HILL': {
-            'BOP': ['Deadlands','Fen','Volcano','Wasteland','Icy Hills'],
-            'BWG': [],
-            'MC': [],
-            'XL': []
-        },
-        'PEAK': {
-            'BOP': ['Mesa'],
-            'BWG': [],
-            'MC': [],
-            'XL': []
-        }
-    },
-    'ODD': {
-        'SEA': {
-            'BOP': [],
-            'BWG': [],
-            'MC': ['MushroomIslandShore'],
-            'XL': []
-        },
-        'SHORE': {
-            'BOP': [],
-            'BWG': [],
-            'MC': ['MushroomIslandShore'],
-            'XL': []
-        },
-        'PLAIN': {
-            'BOP': ['Garden'],
-            'BWG': [],
-            'MC': ['MushroomIsland'],
-            'XL': []
-        },
-        'WOOD': {
-            'BOP': ['Fungi Forest'],
-            'BWG': [],
-            'MC': ['MushroomIsland'],
-            'XL': []
-        },
-        'HILL': {
-            'BOP': [],
-            'BWG': [],
-            'MC': ['MushroomIsland'],
-            'XL': []
-        },
-        'PEAK': {
-            'BOP': [],
-            'BWG': [],
-            'MC': [],
-            'XL': [],
-            'MOC': ['WyvernBiome']
-        }
+    'MOC': {
+        'WyvernBiome': []
     }
 }
+
