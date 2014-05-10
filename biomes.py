@@ -7,7 +7,7 @@ fauna = ['magical','calm','wild','dangerous','evil']
 # Mod: Biome: [temperature, aridity, terrain, flora, fauna]
 biomes = {
     'BOP': {
-        'Alps': ['icy','dry','jagged','deserted','calm']
+        'Alps': ['icy','dry','jagged','deserted','calm'],
         'Arctic': ['icy','dry','flat','deserted','calm'],
         'Bamboo Forest': ['hot','balanced','flat','tangled','wild'],
         'Bayou': ['warm','soaked','flat','tangled','dangerous'],

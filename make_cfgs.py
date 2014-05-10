@@ -1,5 +1,5 @@
 from biomes import biomes
-from creatures import creatures, spawn
+from creatures import creatures
 
 # yes, yes this is procedural and could be easier done functionally... but for such a narrow purpose... yeah
 
@@ -7,43 +7,26 @@ zones = {}
 
 # recompile easy-to-read list of biome assignments into Mo'C-ready structure
 
-for clime in biomes:
-    for terrain in biomes[clime]:
-        for mod in biomes[clime][terrain]:
-            if biomes[clime][terrain][mod]:
-                ct = '%s%s' % (clime, terrain)
-                if ct not in zones:
-                    zones[ct] = []
-                for biome in biomes[clime][terrain][mod]:
-                    if biome not in zones[ct]:
-                        zones[ct].append('%s|%s' % (mod, biome))
+print '# Configuration file \n\nbiomegroup-defaults {'
+for cmod in creatures:
+    for cname in creatures[cmod]:
+        found_in_biomes = []
+        for bmod in biomes:
+            for bname in biomes[bmod]:
+                each_req_satisfied = True
+                if not creatures[cmod][cname]:
+                    continue
+                for reqs in creatures[cmod][cname]:
+                    at_least_one_requirement = False
+                    for this_req in reqs:
+                        if this_req in biomes[bmod][bname]:
+                            at_least_one_requirement = True
+                    if not at_least_one_requirement:
+                        each_req_satisfied = False
+                if each_req_satisfied:
+                    found_in_biomes.append('%s|%s' % (bmod, bname))
+        print '\tS:%s_%s_DEFAULT:<%s>' % (
+            cmod.upper(), cname.upper(), ':'.join(found_in_biomes)
+        )
+print '}'
 
-# cycle through new construct and push to configuration file
-
-MoCBiomeGroups = open('MoCBiomeGroups.cfg','w')
-MoCBiomeGroups.write('# Configuration file\n')
-for ct in zones:
-    MoCBiomeGroups.write('\n####################\n# %s\n####################\n' % ct.lower())
-    MoCBiomeGroups.write('%s {\n    S:%s <%s>\n}\n\n' % (ct.lower(), ct, ":".join(zones[ct])))
-MoCBiomeGroups.close()
-
-# now cycle through the creature construct and push out individual configs for each mod
-# this relies on creatures.py having correctly named/cased mod names at the top of the hierarchy
-
-BiomeSettings = "\n\n####################\n# entity-biome-settings\n####################\n\nentity-biome-settings {\n%s\n}"
-SpawnSettings = "\n\n####################\n# entity-spawn-settings\n####################\n\nentity-spawn-settings {\n%s\n}\n"
-
-for mod in creatures:
-    CreaturesCFG = open('%s.cfg' % mod, 'w')
-    ebs = []
-    ess = []
-    for btype in creatures[mod]:
-        for beast in creatures[mod][btype]:
-            ((rarity, behavior), categories) = creatures[mod][btype][beast]
-            ebs.append('    S:%s <%s>' % (beast, ":".join(categories)))
-            ess.append('    S:%s <%s:%d:%s>' % (beast, btype, spawn[rarity], spawn[behavior]))
-            biomelist = []
-    CreaturesCFG.write('# Configuration File')
-    CreaturesCFG.write(BiomeSettings % "\n".join(ebs))
-    CreaturesCFG.write(SpawnSettings % "\n".join(ess))
-    CreaturesCFG.close()

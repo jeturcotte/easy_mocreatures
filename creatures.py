@@ -1,6 +1,6 @@
 # mod: { beast: [[this, or, that], 'and' [this, or, that]], etc }
 creatures = {
-    'BiomesOPlenty': {
+    'BOP': {
         'bird': [],
         'glob': [['hot','molten'], ['wet','soaked'], ['dangerous']],
         'junglespider': [['hot','warm'], ['wet','soaked'], ['tangled'],['dangerous']],
@@ -9,7 +9,7 @@ creatures = {
         'rosester': [['magical'], ['brush','thickets']],
         'wasp': [['warm','hot'], ['dangerous'], ['dry'], ['hilly','mountainous']]
     },
-    'MoCreatures': {
+    'MOC': {
         'ant': [['cool','warm','hot'], ['arid','dry','balanced','wet'], ['calm','wild','dangerous']],
         'bear': [['icy','cool','warm'], ['dry','balanced','wet'], ['hilly','mountainous'], ['brush','thicket','forested'], ['wild','dangerous']],
         'bee': [['cool','warm','hot'], ['arid','dry','balanced','wet'], ['calm','wild','dangerous']],
@@ -68,7 +68,7 @@ creatures = {
         'wwolf': [['cool','warm','hot'], ['dangerous','evil'], ['flat','shelved','hilly','mountainous'], ['brush','thickets','forested','tangled']],
         'wyvern': [],
     },
-    'Vanilla': {
+    'MC': {
         'bat': [['cool','warm','hot'], ['arid','dry','balanced','wet'], ['calm','wild','dangerous']],
         'blaze': [['molten'], ['evil']],
         'cavespider': [['hot'],['wet','soaked'], ['dangerous','evil']],
