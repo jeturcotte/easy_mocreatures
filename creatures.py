@@ -59,7 +59,7 @@ creatures = {
         'shark': [['submerged'], ['wild','dangerous']],
         'silverskeleton': [['evil']],
         'smallfish': [['submerged','soaked','wet','balanced']],
-        'smail': [['cool','warm','hot'], ['soaked','wet']],
+        'snail': [['cool','warm','hot'], ['soaked','wet']],
         'snake': [['warm','hot'], ['arid','dry','balanced','wet'], ['wild','dangerous','evil']],
         'turkey': [['cool'], ['calm','wild'], ['brush','thickets','forested']],
         'turtle': [['cool','warm','hot'], ['shore','flat','shelved'], ['deserted','brush'], ['magical','calm','wild']],
