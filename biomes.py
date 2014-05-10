@@ -1,6 +1,6 @@
 temperature = ['icy','cool','warm','hot','molten']
 aridity = ['arid','dry','balanced','wet','soaked']
-terrain = ['flat','shelved','hilly','mountainous','jagged']
+terrain = ['submerged','shore','flat','shelved','hilly','mountainous','jagged']
 flora = ['deserted','brush','thickets','fungal','forested','tangled']
 fauna = ['magical','calm','wild','dangerous','evil']
 
@@ -21,7 +21,7 @@ biomes = {
         'Coniferous Forest': ['warm','balanced','hilly','forested','wild'],
         'Crag': ['cool','arid','jagged','deserted','dangerous'],
         'Dead Forest': ['cool','balanced','hilly','forested','evil'],
-        'Dead Swamp': ['warm','wet','flat','thickets','evil'],
+        'Dead Swamp': ['warm','soaked','flat','thickets','evil'],
         'Deciduous Forest': ['warm','balanced','hilly','forested','wild'],
         'Dunes': ['hot','dry','jagged','deserted','dangerous'],
         'Fen': ['warm','wet','hilly','thickets','dangerous'],
@@ -61,7 +61,7 @@ biomes = {
         'Thicket': ['cool','dry','flat','brush','calm'],
         'Timber': ['cool','dry','hilly','forested','calm'],
         'Tropical Rainforest': ['hot','wet','hilly','forested','wild'],
-        'Tropics': ['hot','balanced','hilly','thickets','wild'],
+        'Tropics': ['hot','wet','hilly','thickets','wild'],
         'Tundra': ['cool','dry','flat','thickets','wild'],
         'Volcano': ['molten','dry','mountainous','deserted','dangerous'],
         'Wasteland': ['hot','arid','flat','brush','evil'],
@@ -69,16 +69,16 @@ biomes = {
         'Woodland': ['warm','balanced','hilly','forested','calm']
     },
     'MC': {
-        'Beach': ['warm','balanced','flat','deserted','calm'],
+        'Beach': ['warm','balanced','shore','deserted','calm'],
         'Birch Forest': ['cool','balanced','flat','forested','calm'],
         'Birch Forest Hills': ['cool','balanced','hilly','forested','wild'],
         'Birch Forest Hills M': ['cool','balanced','mountainous','forested','wild'],
         'Birch Forest M': ['cool','balanced','hilly','forested','wild'],
-        'Cold Beach': ['cool','balanced','flat','deserted','calm'],
+        'Cold Beach': ['cool','balanced','shore','deserted','calm'],
         'Cold Taiga': ['icy','balanced','hilly','forested','wild'],
         'Cold Taiga Hills': ['icy','balanced','mountainous','forested','wild'],
         'Cold Taiga M': ['icy','balanced','hilly','forested','calm'],
-        'Deep Ocean': ['warm','soaked','flat','deserted','calm'],
+        'Deep Ocean': ['warm','soaked','submerged','deserted','calm'],
         'Desert': ['hot','arid','flat','deserted','calm'],
         'Desert M': ['hot','arid','hilly','deserted','wild'],
         'DesertHills': ['hot','arid','hilly','deserted','wild'],
@@ -90,8 +90,8 @@ biomes = {
         'Flower Forest': ['warm','balanced','hilly','forested','calm'],
         'Forest': ['cool','balanced','hilly','forested','wild'],
         'ForestHills': ['cool','balanced','mountainous','forested','wild'],
-        'FrozenOcean': ['icy','soaked','flat','deserted','dangerous'],
-        'FrozenRiver': ['icy','balanced','flat','deserted','wild'],
+        'FrozenOcean': ['icy','soaked','submerged','deserted','dangerous'],
+        'FrozenRiver': ['icy','balanced','shore','deserted','wild'],
         'Hell': ['molten','arid','jagged','deserted','evil'],
         'Ice Mountains': ['icy','dry','mountainous','deserted','wild'],
         'Ice Plains': ['icy','dry','flat','deserted','wild'],
@@ -111,10 +111,10 @@ biomes = {
         'Mesa Plateau F M': ['hot','arid','jagged','thickets','wild'],
         'Mesa Plateau M': ['hot','arid','jagged','brush','wild'],
         'MushroomIsland': ['magical','balanced','hilly','fungal','calm'],
-        'MushroomIslandShore': ['magical','balanced','flat','fungal','calm'],
-        'Ocean': ['cool','soaked','flat','deserted','wild'],
+        'MushroomIslandShore': ['magical','balanced','shore','fungal','calm'],
+        'Ocean': ['cool','soaked','submerged','deserted','wild'],
         'Plains': ['cool','balanced','flat','brush','calm'],
-        'River': ['cool','balanced','flat','deserted','wild'],
+        'River': ['cool','balanced','shore','brush','wild'],
         'Roofed Forest': ['warm','wet','flat','tangled','dangerous'],
         'Roofed Forest M': ['warm','wet','hilly','tangled','dangerous'],
         'Savanna': ['hot','dry','flat','brush','dangerous'],
@@ -122,7 +122,7 @@ biomes = {
         'Savanna Plateau': ['hot','dry','shelved','brush','wild'],
         'Savanna Plateau M': ['hot','dry','jagged','brush','wild'],
         'Sky': [],
-        'Stone Beach': ['cool','dry','jagged','deserted','calm'],
+        'Stone Beach': ['cool','dry','shore','deserted','calm'],
         'Sunflower Plains': ['warm','balanced','flat','brush','calm'],
         'Swampland': ['warm','soaked','flat','thickets','wild'],
         'Swampland M': ['warm','wet','hilly','thickets','dangerous'],
