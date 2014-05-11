@@ -25,7 +25,7 @@ for cmod in creatures:
                         each_req_satisfied = False
                 if each_req_satisfied:
                     found_in_biomes.append('%s|%s' % (bmod, bname))
-        print '\tS:%s_%s_DEFAULT:<%s>' % (
+        print '\tS:%s_%s_DEFAULT <%s>' % (
             cmod.upper(), cname.upper(), ':'.join(found_in_biomes)
         )
 print '}'
