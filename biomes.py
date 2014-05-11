@@ -11,7 +11,7 @@ biomes = {
         'Arctic': ['icy','dry','flat','deserted','calm'],
         'Bamboo Forest': ['hot','balanced','flat','tangled','wild'],
         'Bayou': ['warm','soaked','flat','tangled','dangerous'],
-        'Bloody Heap': [],
+        'Bloody Heap': ['molten','arid','jagged','thickets','evil'],
         'Bog': ['hot','wet','flat','thickets','dangerous'],
         'Boreal Forest': ['cool','balanced','mountainous','forested','calm'],
         'Brushland': ['hot','dry','flat','thickets','dangerous'],
